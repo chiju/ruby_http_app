@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: ruby-http-app
+  name: ruby-http-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ruby-http-app
+  template:
+    metadata:
+      labels:
+        name: ruby-http-app
+    spec:
+      containers:
+      - name: ruby-http-app
+        image: ruby_http_server:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+      

@@ -10,4 +10,4 @@ COPY --chown=ruby_user http_server.rb ./
 
 EXPOSE 80
 
-ENTRYPOINT [ "ruby", "http_server.rb" ] 
+ENTRYPOINT [ "ruby", "http_server.rb" ]
